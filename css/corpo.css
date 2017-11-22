@@ -1,0 +1,141 @@
+body{	
+	background-color: black;
+	width: 100%;
+	height: 840px;
+	margin: 0;
+	font-weight: normal;
+	font-family: Helvetica, sans-serif;
+}
+header{
+	border-radius: 5px;
+	position: fixed;
+	opacity:0.75;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+	margin: 0;
+	background-color: red;
+	height: 80px;
+	width: 100%;
+}
+header:hover{
+		opacity:1.0;
+		background-color: #FF0000;
+		-webkit-transition: 2s all ease;
+	}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+#ul{
+	margin-top: 0;
+	padding-top: 8px;
+	background-color: red;
+}
+li{
+	float: left;
+}
+#logo{
+	width: 120px;
+	height: 70px;
+	margin-right: 100px;
+}
+.as{
+	padding-left: 35px;
+	padding-right: 35px;
+	color: black;
+	text-decoration-style: none;
+}
+.as:hover {
+	color: white;
+	transition: 2s;
+}
+#usuario{	
+	padding-top: 7px;
+	width: 60px;
+	height: 40px;
+}
+button{
+	margin-left: 80px;
+	background-color: black;
+	border-width: 0;
+	color: white;
+	margin-top: 3px;
+}
+button:hover {
+	-moz-transform: scale(1.3);
+		-webkit-transform: scale(1.3);
+		-o-transform: scale(1.3);
+		-webkit-transition: 1s all ease;
+		background-color: white;
+		color: black;
+}
+header h3{
+	margin-left: 5px;
+}
+.usu{
+	position: relative;
+}
+.usus{
+	position: absolute;
+	right: 198px;
+	top: 65px;
+	display: none;
+	background-color: gray;
+	width: 138px;
+	height: 25px;	
+	color: black;
+}
+#logout{
+	margin-top: 3px;
+	margin-left: 25px;
+	background-color: gray;
+}
+#logout:hover {
+	color: white;
+}
+
+
+main{
+	border-width: 3px;
+	border-style: solid;
+	border-color: white;
+	margin-top: 80px;
+	background-color: gray;
+	height: 800px;
+	width: 1000px;
+	margin: 0 auto;
+}
+.footer{
+		border-style: solid;
+		border-width: 3px;
+		border-color: white;
+		background-color: white;
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.footer p{
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.footer span{
+		border-left: 1px;
+		border-right: 1px;
+		border-top: 0px;
+		border-bottom: 0px;
+		border-style: solid;
+		padding-left: 65px;
+		padding-right: 65px;
+		margin-right: 65px;
+		margin-left: 65px;
+	}
+	.footer a{
+		color: black;
+	}
+	
+
+	#id{
+		margin-left: 30px;
+	}

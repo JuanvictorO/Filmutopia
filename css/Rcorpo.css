@@ -1,0 +1,27 @@
+body{
+	width: 99%;
+
+}
+main{
+	width: 100%;
+}
+header{
+	width: 100%;
+}
+.footer{
+	width: 50%;
+}
+.menu-desktop{
+	display: none;
+}
+#logo{
+	margin-right: 0;
+	width: 25vw;
+	height: 18vw;
+}
+.usus{
+	right: 30px;
+}
+.ul{
+	padding-left: 0px;
+}
