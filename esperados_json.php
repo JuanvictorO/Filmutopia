@@ -1,0 +1,1 @@
+[{"id":1,"nome":"Justice League","img":"./img/jg.jpg"},{"id":2,"nome":"Star Wars: Episódio VIII","img":"./img/wars.jpg"},{"id":3,"nome":"Thor: Ragnarok","img":"./img/thor.jpg"},{"id":4,"img":"./img/de.jpg"},{"id":5,"img":"./img/tn.jpg"},{"id":6,"img":"./img/tn.jpg"}]

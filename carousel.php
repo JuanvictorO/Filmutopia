@@ -1,4 +1,4 @@
-q<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>carousel</title>
@@ -7,57 +7,11 @@ q<!DOCTYPE html>
   <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
   <style type="text/css">
 
-    * {
-      box-sizing: border-box;
-    }
-
-    .slider {
-        width: 50%;
-        margin: 100px auto;
-    }
-
-    .slick-slide {
-      margin: 0px 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-slide img:hover {
-      width: 110%;
-      transition: 1s;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: black;
-    }
-
-
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
-    }
     
-    .slick-active {
-      opacity: 1;
-      cursor: pointer;
-    }
-
-    .slick-current {
-      opacity: 1;
-      cursor: pointer;
-    }
-
-
-    figure img{
-      width: 100px;
-      height: 134px;
-    }
   </style>
   <meta name="viewport" content="width=device-width, user-scalable=no"/>
   <link rel="stylesheet" type="text/css" href="./css/corpo.css"/>
+   <link rel="stylesheet" type="text/css" href="./css/home_conteudo.css"/>
   <script type="text/javascript" src="./js/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" media="(max-width: 769px)" href="./css/Rcorpo.css"/>
   <script type="text/javascript">
@@ -71,12 +25,17 @@ q<!DOCTYPE html>
 
 
 
-      /*var link = "http://localhost/Filmutopia/json.php";
+      var link = "http://localhost/Filmutopia/Filmutopia/js/esperados_json.php";
       var xhr = $.get(link);
 
       xhr.done(function(lista){
         var filmes = JSON.parse(lista);
-      });*/
+      
+        $.each(filmes, function(i, cenas){
+          $("#primeiro").append($("<div />").append($("<a />").attr("href","../"+cenas.id+"filme.php")
+            .append($("<figure />").append($("<img />").attr("href",cenas.img)).append($("<figcaption />").text(cenas.nome)))))
+        });
+      });
 
     });
   </script>
@@ -101,7 +60,6 @@ q<!DOCTYPE html>
   }
 
 ?>
-
 <title>
     Filmutopia
   </title>
@@ -120,9 +78,9 @@ q<!DOCTYPE html>
   
     <a href="#"><button class="usu">
     <li class="gatilho_logout">
-    <img id="usuario" src="./foto_usuario/
+    <img id="usuario" src="../foto_usuario/
     <?php 
-      if(!file_exists('foto_usuario/'.$id)){
+      if(!file_exists('../../foto_usuario/'.$id)){
         echo "anonimo.jpeg";
       }
       else{
@@ -159,12 +117,12 @@ if(!file_exists('foto_usuario/'.$id)){
 }
 else{
 ?>
-  <h3>Mais esperados: </h3>
-  <section class="regular slider">
-    <div>
+  <p class="titulo">Mais esperados: </p>
+  <section class="regular slider" id="primeiro">
+    <!--<div>
       <a href="jl.php">
         <figure>
-          <img src="http://placehold.it/350x300?text=6">
+          <img src="http://placehold.it/350x300?text=6" class="imgs">
           <figcaption>ggg</figcaption>
         </figure>
       </a>    
@@ -172,7 +130,7 @@ else{
         <div>
       <a href="#">
         <figure>
-          <img src="http://placehold.it/350x300?text=6">
+          <img src="http://placehold.it/350x300?text=6" class="imgs">
           <figcaption>ggg</figcaption>
         </figure>
       </a>    
@@ -180,7 +138,7 @@ else{
         <div>
       <a href="#">
         <figure>
-          <img src="http://placehold.it/350x300?text=6">
+          <img src="http://placehold.it/350x300?text=6" class="imgs">
           <figcaption>ggg</figcaption>
         </figure>
       </a>    
@@ -188,7 +146,7 @@ else{
         <div>
       <a href="#">
         <figure>
-          <img src="http://placehold.it/350x300?text=6">
+          <img src="http://placehold.it/350x300?text=6" class="imgs">
           <figcaption>ggg</figcaption>
         </figure>
       </a>    
@@ -196,7 +154,7 @@ else{
         <div>
       <a href="#">
         <figure>
-          <img src="http://placehold.it/350x300?text=6">
+          <img src="http://placehold.it/350x300?text=6" class="imgs">
           <figcaption>ggg</figcaption>
         </figure>
       </a>    
@@ -204,18 +162,28 @@ else{
         <div>
       <a href="#">
         <figure>
-          <img src="http://placehold.it/350x300?text=6">
+          <img src="http://placehold.it/350x300?text=6" class="imgs">
           <figcaption>ggg</figcaption>
         </figure>
       </a>    
-    </div>
+    </div>-->
   </section>
 
-  
+  <p class="titulo2">Lançamentos: </p>
+  <section class="regular slider" id="segundo">
+    
+  </section>
+
+  <p class="titulo2">Maior Bilheteria: </p>
+  <section>
+    
+  </section>
+
+   <p class="titulo2">Séries: </p>
+
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <script src="./funcoes.js"></script>
-
 
 <?php
 }
