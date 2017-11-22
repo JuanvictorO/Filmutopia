@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+q<!DOCTYPE html>
 <html>
 <head>
   <title>carousel</title>
@@ -162,7 +162,7 @@ else{
   <h3>Mais esperados: </h3>
   <section class="regular slider">
     <div>
-      <a href="#">
+      <a href="jl.php">
         <figure>
           <img src="http://placehold.it/350x300?text=6">
           <figcaption>ggg</figcaption>
