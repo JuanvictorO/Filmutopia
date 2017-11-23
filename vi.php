@@ -64,7 +64,7 @@
 		$x = $_POST['coment'];
 		if(isset($x)){
 			mysqli_query($conexao,"INSERT INTO comentar(idFilme, idUsuario, coment, stars)
-				VALUES('8','$id','$x', $y)");
+				VALUES('22','$id','$x', $y)");
 		}
 		else{
 			exit();
@@ -124,7 +124,7 @@
 <?php
 if(!file_exists('foto_usuario/'.$id)){
 ?>
-	<form id="form" method="POST" action="lg.php" enctype="multipart/form-data">
+	<form id="form" method="POST" action="vi.php" enctype="multipart/form-data">
     	<input type="file" name="perfil" value="foto de perfil">
    	 	<input type="submit" name="envio_de_foto">
  	 </form>
@@ -132,29 +132,30 @@ if(!file_exists('foto_usuario/'.$id)){
 }
 else{
 ?>
-<p class="titulo" id="dados">Logan</p>
+<p class="titulo" id="dados">Vikings</p>
 	<div>
 	<div class="align"  >
 	<h3>Ficha Técnica</h3>
-	Data de lançamento 2 de março de 2017 <br><br>
-Direção: James Mangold<br><br>
-Elenco: Hugh Jackman, Patrick Stewart, Dafne Keen<br><br> 
-Gêneros Ação, Ficção científica, Aventura<br><br>
-Nacionalidade EUA
+
+Criado por	Michael Hirst (2013)<br><br>
+Com	Danila Kozlovsky<br><br>
+País	EUA, Reino Unido, Irlanda<br><br>
+Gênero	Aventura, Drama, Histórico<br><br>
+Status	Em andamento
 	</div>
-	<img src="./img/logan.jpeg" class="img" class="align"/>
+	<img src="./img/vi.jpg" class="img" class="align"/>
 	</div>
 <p class="titulo2" id="sinopse"> Sinopse </p>
-<p class="sinopse">Em 2029, Logan (Hugh Jackman) ganha a vida como chofer de limousine para cuidar do nonagenário Charles Xavier (Patrick Stewart). Debilitado fisicamente e esgotado emocionalmente, ele é procurado por Gabriela (Elizabeth Rodriguez), uma mexicana que precisa da ajuda do ex-X-Men para defender a pequena Laura Kinney / X-23 (Dafne Keen). Ao mesmo tempo em que se recusa a voltar à ativa, Logan é perseguido pelo mercenário Donald Pierce (Boyd Holbrook), interessado na menina.</p>
+<p class="sinopse">Ragnar Lothbrok (Travis Fimmel) é o maior guerreiro da sua era. Lider de seu bando, com seus irmãos e sua família, ele ascende ao poder e torna-se Rei da tribo dos vikings. Além de guerreiro implacável, Ragnar segue as tradições nórdicas e é devoto dos deuses. As lendas contam que ele descende diretamente de Odin, o deus da guerra. </p>
 <p class="titulo2" id="trailer"> Trailer</p>
-<iframe src="https://www.youtube.com/embed/RWSuAC9CYxo" class="video"></iframe>
+<iframe src="https://www.youtube.com/embed/xdm7Z3TQhDg" class="video"></iframe>
 
 <?php
 }	
 ?>
 <div class="comentar" id="comentar">
 	<h3 id="perfil" style="margin-left:  26vw"><?php if($c == false){ echo "Digite aqui seu comentário"; } else { echo "!Só é permitido um comentário do usuário por filme!";} ?></h3>
-		<form method="POST" action="lg.php" style="margin-left:  26vw" style="visibility: <?php if($c == true){ echo "hidden"; } ?>">
+		<form method="POST" action="vi.php" style="margin-left:  26vw" style="visibility: <?php if($c == true){ echo "hidden"; } ?>">
 			Nota: <input type="radio" name="number" value="1" checked> 1
   			<input type="radio" name="number" value="2"> 2
   			<input type="radio" name="number" value="3">3
@@ -170,7 +171,7 @@ Nacionalidade EUA
 </footer>
 <section>
 	<?php
-	$select = mysqli_query($conexao,'SELECT c.idFilme, c.idUsuario, c.coment,c.stars, u.nome FROM comentar c JOIN usuario u ON c.idUsuario = u.id WHERE c.idFilme =8');
+	$select = mysqli_query($conexao,'SELECT c.idFilme, c.idUsuario, c.coment,c.stars, u.nome FROM comentar c JOIN usuario u ON c.idUsuario = u.id WHERE c.idFilme =22');
 	while($linha = mysqli_fetch_array($select)){
 		$star = $linha['stars'];
 		$comentario = $linha['coment'];

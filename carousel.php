@@ -220,7 +220,7 @@ else{
       </a>    
     </div>
         <div>
-      <a href="logan.php">
+      <a href="lg.php">
         <figure>
           <img src="./img/logan.jpeg" class="imgs">
           <figcaption>Logan</figcaption>
@@ -325,7 +325,7 @@ else{
       </a>    
     </div>
         <div>
-      <a href="Titanic">
+      <a href="ti.php">
         <figure>
           <img src="./img/titanic.jpeg" class="imgs">
           <figcaption>Titanic</figcaption>
@@ -341,7 +341,7 @@ else{
       </a>    
     </div>
         <div>
-      <a href="av.php">
+      <a href="vg.php">
         <figure>
           <img src="./img/av.jpg" class="imgs">
           <figcaption>Avengers</figcaption>
@@ -377,7 +377,7 @@ else{
       </a>    
     </div>
         <div>
-      <a href="Titanic">
+      <a href="ti.php">
         <figure>
           <img src="./img/titanic.jpeg" class="imgs">
           <figcaption>Titanic</figcaption>
@@ -393,7 +393,7 @@ else{
       </a>    
     </div>
         <div>
-      <a href="av.php">
+      <a href="vg.php">
         <figure>
           <img src="./img/av.jpg" class="imgs">
           <figcaption>Avengers</figcaption>

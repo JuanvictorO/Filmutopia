@@ -64,7 +64,7 @@
 		$x = $_POST['coment'];
 		if(isset($x)){
 			mysqli_query($conexao,"INSERT INTO comentar(idFilme, idUsuario, coment, stars)
-				VALUES('8','$id','$x', $y)");
+				VALUES('21','$id','$x', $y)");
 		}
 		else{
 			exit();
@@ -124,7 +124,7 @@
 <?php
 if(!file_exists('foto_usuario/'.$id)){
 ?>
-	<form id="form" method="POST" action="lg.php" enctype="multipart/form-data">
+	<form id="form" method="POST" action="dm.php" enctype="multipart/form-data">
     	<input type="file" name="perfil" value="foto de perfil">
    	 	<input type="submit" name="envio_de_foto">
  	 </form>
@@ -132,29 +132,28 @@ if(!file_exists('foto_usuario/'.$id)){
 }
 else{
 ?>
-<p class="titulo" id="dados">Logan</p>
+<p class="titulo" id="dados">Avengers</p>
 	<div>
 	<div class="align"  >
 	<h3>Ficha Técnica</h3>
-	Data de lançamento 2 de março de 2017 <br><br>
-Direção: James Mangold<br><br>
-Elenco: Hugh Jackman, Patrick Stewart, Dafne Keen<br><br> 
-Gêneros Ação, Ficção científica, Aventura<br><br>
-Nacionalidade EUA
+Criado por	Drew Goddard (2015)<br><br>
+Com	Charlie Cox, Deborah Ann Woll, Elden Henson<br><br> 
+País	EUA<br><br>
+Gênero	Drama, Fantasia, Ação
 	</div>
-	<img src="./img/logan.jpeg" class="img" class="align"/>
+	<img src="./img/daredevil.jpeg" class="img" class="align"/>
 	</div>
 <p class="titulo2" id="sinopse"> Sinopse </p>
-<p class="sinopse">Em 2029, Logan (Hugh Jackman) ganha a vida como chofer de limousine para cuidar do nonagenário Charles Xavier (Patrick Stewart). Debilitado fisicamente e esgotado emocionalmente, ele é procurado por Gabriela (Elizabeth Rodriguez), uma mexicana que precisa da ajuda do ex-X-Men para defender a pequena Laura Kinney / X-23 (Dafne Keen). Ao mesmo tempo em que se recusa a voltar à ativa, Logan é perseguido pelo mercenário Donald Pierce (Boyd Holbrook), interessado na menina.</p>
+<p class="sinopse">Matthew Michael Murdock (Charlie Cox) é um jovem atleta e excelente aluno. Ainda na infância, um acidente envolvendo um caminhão que carregava lixos tóxicos o deixou cego e fez com que ele desenvolvesse vários sentidos. Quando Matt decide vestir o uniforme e adotar o nome "Demolidor" (Daredevil), leva uma vida dupla: é advogado durante o dia, e, à noite, protege as ruas de Hell's Kitchen, seu bairro em Nova York.</p>
 <p class="titulo2" id="trailer"> Trailer</p>
-<iframe src="https://www.youtube.com/embed/RWSuAC9CYxo" class="video"></iframe>
+<iframe src="https://www.youtube.com/embed/jAy6NJ_D5vU" class="video"></iframe>
 
 <?php
 }	
 ?>
 <div class="comentar" id="comentar">
 	<h3 id="perfil" style="margin-left:  26vw"><?php if($c == false){ echo "Digite aqui seu comentário"; } else { echo "!Só é permitido um comentário do usuário por filme!";} ?></h3>
-		<form method="POST" action="lg.php" style="margin-left:  26vw" style="visibility: <?php if($c == true){ echo "hidden"; } ?>">
+		<form method="POST" action="vg.php" style="margin-left:  26vw" style="visibility: <?php if($c == true){ echo "hidden"; } ?>">
 			Nota: <input type="radio" name="number" value="1" checked> 1
   			<input type="radio" name="number" value="2"> 2
   			<input type="radio" name="number" value="3">3
@@ -170,7 +169,7 @@ Nacionalidade EUA
 </footer>
 <section>
 	<?php
-	$select = mysqli_query($conexao,'SELECT c.idFilme, c.idUsuario, c.coment,c.stars, u.nome FROM comentar c JOIN usuario u ON c.idUsuario = u.id WHERE c.idFilme =8');
+	$select = mysqli_query($conexao,'SELECT c.idFilme, c.idUsuario, c.coment,c.stars, u.nome FROM comentar c JOIN usuario u ON c.idUsuario = u.id WHERE c.idFilme =21');
 	while($linha = mysqli_fetch_array($select)){
 		$star = $linha['stars'];
 		$comentario = $linha['coment'];
