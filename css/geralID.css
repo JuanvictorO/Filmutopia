@@ -1,0 +1,87 @@
+main{
+	height: 1500px;
+	width: 1000px;
+}
+.titulo{
+	border-style: solid;
+	border-color: white;
+	border-width: 3px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px; 
+	margin-top: 15px;
+	color: white;
+	font-size: 1.8em;
+	padding-bottom: 8px;
+	padding-left: 100px;
+}
+.titulo2{
+	border-style: solid;
+	border-color: white;
+	border-width: 3px;
+ 	border-right-width: 0px;
+ 	border-left-width: 0px;
+	color: white;
+	font-size: 1.8em;
+	padding-bottom: 8px;
+	padding-left: 100px;
+	padding-top: 8px;
+}
+.img{
+	height: 300px;
+	width: 200px;
+	margin-left: 20px;
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+}
+.img:hover{
+	-moz-transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		-webkit-transition: 1s all ease;
+		border-color: red;
+}
+.align{
+	float: left;
+}
+.align:first-child {
+	border-color: white;
+	border-style: solid;
+	border-width: 3px;
+	background-color: black;
+	padding: 6px;
+	margin-top: 25px;
+	margin-left: 180px;
+}
+.align h3{
+	text-align: center;
+}
+.align:first-child:hover h3{
+	color: red;
+	transition: 1s;
+}
+.align:first-child:hover {
+	-moz-transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		-webkit-transition: 1s all ease;
+		color: red;
+		border-color: red;
+}
+.sinopse{
+	padding: 5px 50px;
+	font-size: 1.4em;
+	font-family: Comic Sans, Comic Sans MS, cursive;
+}
+.video{
+	margin-left: 16vw;
+	width: 500px;
+	height: 260px;
+}
+.video:hover{
+	-moz-transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		-webkit-transition: 1s all ease;
+}

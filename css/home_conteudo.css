@@ -1,5 +1,7 @@
 main{
-	height: 1300px;
+	height: 2000px;
+	width: 1000px;
+
 }
 .titulo{
 	border-style: solid;
@@ -54,7 +56,12 @@ figcaption{
 	color: white;
 }
 
-
+.menu-desktop{
+	display: block;
+}
+#mobile{
+	display: none;
+}
 * {
       box-sizing: border-box;
     }

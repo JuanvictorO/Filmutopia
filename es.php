@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -64,7 +64,7 @@
 		$x = $_POST['coment'];
 		if(isset($x)){
 			mysqli_query($conexao,"INSERT INTO comentar(idFilme, idUsuario, coment, stars)
-				VALUES('1','$id','$x', $y)");
+				VALUES('11','$id','$x', $y)");
 		}
 		else{
 			exit();
@@ -124,7 +124,7 @@
 <?php
 if(!file_exists('foto_usuario/'.$id)){
 ?>
-	<form id="form" method="POST" action="jl.php" enctype="multipart/form-data">
+	<form id="form" method="POST" action="es.php" enctype="multipart/form-data">
     	<input type="file" name="perfil" value="foto de perfil">
    	 	<input type="submit" name="envio_de_foto">
  	 </form>
@@ -132,34 +132,30 @@ if(!file_exists('foto_usuario/'.$id)){
 }
 else{
 ?>
-<p class="titulo" id="dados">Justice League</p>
+<p class="titulo" id="dados">Esquadrão Suicida</p>
 	<div>
 	<div class="align"  >
 	<h3>Ficha Técnica</h3>
-	Data de lançamento: 16 de novembro de 2017<br/><br/>
-
-
-	Direção: Zack Snyder<br/><br/>
-
-	Atores: Ben Affleck, Henry Cavill, Gal Gadot<br/><br/>
-
-	Gêneros: Ação, Ficção científica<br/><br/>
-
-	Nacionalidade: EUA
+	Data de lançamento 4 de agosto de 2016<br><br>
+Direção: David Ayer<br><br>
+Elenco: Margot Robbie, Will Smith, Jared Leto<br><br> 
+Gêneros Ação, Fantasia<br><br>
+Nacionalidade EUA
 	</div>
-	<img src="./img/jl.jpeg" class="img" class="align"/>
+	<img src="./img/es.jpg" class="img" class="align"/>
 	</div>
 <p class="titulo2" id="sinopse"> Sinopse </p>
-<p class="sinopse">Impulsionado pela restauração de sua fé na humanidade e inspirado pelo ato altruísta do Superman (Henry Cavill), Bruce Wayne (Ben Affleck) convoca sua nova aliada Diana Prince (Gal Gadot) para o combate contra um inimigo ainda maior, recém-despertado. Juntos, Batman e Mulher-Maravilha buscam e recrutam com agilidade um time de meta-humanos, mas mesmo com a formação da liga de heróis sem precedentes - Batman, Mulher-Maraviha, Aquaman (Jason Momoa), Cyborg (Ray Fisher) e Flash (Ezra Miller) -, poderá ser tarde demais para salvar o planeta de um catastrófico ataque.</p>
+<p class="sinopse">Após a aparição do Superman, a agente Amanda Waller (Viola Davis) está convencida que o governo americano precisa ter sua própria equipe de metahumanos, para combater possíveis ameaças. Para tanto ela cria o projeto do Esquadrão Suicida, onde perigosos vilões encarcerados são obrigados a executar missões a mando do governo. Caso sejam bem-sucedidos, eles têm suas penas abreviadas em 10 anos. Caso contrário, simplesmente morrem. O grupo é autorizado pelo governo após o súbito ataque de Magia (Cara Delevingne), uma das "convocadas" por Amanda, que se volta contra ela. Desta forma, Pistoleiro (Will Smith), Arlequina (Margot Robbie), Capitão Bumerangue (Jai Courtney), Crocodilo (Adewale Akinnuoye-Agbaje), El Diablo (Jay Hernandez) e Amarra (Adam Beach) são convocados para a missão. Paralelamente, o Coringa (Jared Leto) aproveita a oportunidade para tentar resgatar o amor de sua vida: Arlequina.
+Título original  Suicide Squad</p>
 <p class="titulo2" id="trailer"> Trailer</p>
-<iframe src="https://www.youtube.com/embed/H0Z7ewOXCKw" class="video"></iframe>
+<iframe src="https://www.youtube.com/embed/gWTUvH-P43I" class="video"></iframe>
 
 <?php
 }	
 ?>
 <div class="comentar" id="comentar">
 	<h3 id="perfil" style="margin-left:  26vw"><?php if($c == false){ echo "Digite aqui seu comentário"; } else { echo "!Só é permitido um comentário do usuário por filme!";} ?></h3>
-		<form method="POST" action="jl.php" style="margin-left:  26vw" style="visibility: <?php if($c == true){ echo "hidden"; } ?>">
+		<form method="POST" action="es.php" style="margin-left:  26vw" style="visibility: <?php if($c == true){ echo "hidden"; } ?>">
 			Nota: <input type="radio" name="number" value="1" checked> 1
   			<input type="radio" name="number" value="2"> 2
   			<input type="radio" name="number" value="3">3
@@ -175,7 +171,7 @@ else{
 </footer>
 <section>
 	<?php
-	$select = mysqli_query($conexao,'SELECT c.idFilme, c.idUsuario, c.coment,c.stars, u.nome FROM comentar c JOIN usuario u ON c.idUsuario = u.id WHERE c.idFilme =1');
+	$select = mysqli_query($conexao,'SELECT c.idFilme, c.idUsuario, c.coment,c.stars, u.nome FROM comentar c JOIN usuario u ON c.idUsuario = u.id WHERE c.idFilme= 11');
 	while($linha = mysqli_fetch_array($select)){
 		$star = $linha['stars'];
 		$comentario = $linha['coment'];

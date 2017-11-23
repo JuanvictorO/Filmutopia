@@ -26,5 +26,31 @@ create table comentar(
 );
 
 insert into filme(nome)
-	value('Justice League');
+	values('Justice League'),
+    ('Star Wars: Episode VIII'),
+    ('Thor Ragnarok'),
+    ('Doutor Estranho'),
+    ('Homem Aranha Homecoming'),
+    ('Fast and Furious'),
+    ('Guardiões da Galáxia 2'),
+    ('Logan'),
+    ('A Cabana'),
+    ('Mulher Maravilha'),
+    ('Esquadrão Suicida'),
+    ('Deus não está Morto 2'),
+    ('Avatar'),
+    ('Titanic'),
+    ('Star Wars: O Despertar da força'),
+    ('Avengers'),
+    ('Procurando Nemo'),
+    ('Capitão América: Guerra Civil'),
+    ('13 Reasons Why'),
+    ('Stranger Things'),
+    ('Daredevil'),
+    ('Vikings'),
+    ('Os Defensores'),
+    ('Sherlock');
+    
+    
+    
 

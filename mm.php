@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -64,7 +64,7 @@
 		$x = $_POST['coment'];
 		if(isset($x)){
 			mysqli_query($conexao,"INSERT INTO comentar(idFilme, idUsuario, coment, stars)
-				VALUES('1','$id','$x', $y)");
+				VALUES('10','$id','$x', $y)");
 		}
 		else{
 			exit();
@@ -124,7 +124,7 @@
 <?php
 if(!file_exists('foto_usuario/'.$id)){
 ?>
-	<form id="form" method="POST" action="jl.php" enctype="multipart/form-data">
+	<form id="form" method="POST" action="tr.php" enctype="multipart/form-data">
     	<input type="file" name="perfil" value="foto de perfil">
    	 	<input type="submit" name="envio_de_foto">
  	 </form>
@@ -132,34 +132,29 @@ if(!file_exists('foto_usuario/'.$id)){
 }
 else{
 ?>
-<p class="titulo" id="dados">Justice League</p>
+<p class="titulo" id="dados">Mulher Maravilha</p>
 	<div>
 	<div class="align"  >
 	<h3>Ficha Técnica</h3>
-	Data de lançamento: 16 de novembro de 2017<br/><br/>
-
-
-	Direção: Zack Snyder<br/><br/>
-
-	Atores: Ben Affleck, Henry Cavill, Gal Gadot<br/><br/>
-
-	Gêneros: Ação, Ficção científica<br/><br/>
-
-	Nacionalidade: EUA
+	Data de lançamento 1 de junho de 2017<br><br>
+Direção: Patty Jenkins<br><br>
+Elenco: Gal Gadot, Chris Pine, Connie Nielsen<br><br> 
+Gêneros Ação, Aventura, Fantasia<br><br>
+Nacionalidade EUA
 	</div>
-	<img src="./img/jl.jpeg" class="img" class="align"/>
+	<img src="./img/mm.jpg" class="img" class="align"/>
 	</div>
 <p class="titulo2" id="sinopse"> Sinopse </p>
-<p class="sinopse">Impulsionado pela restauração de sua fé na humanidade e inspirado pelo ato altruísta do Superman (Henry Cavill), Bruce Wayne (Ben Affleck) convoca sua nova aliada Diana Prince (Gal Gadot) para o combate contra um inimigo ainda maior, recém-despertado. Juntos, Batman e Mulher-Maravilha buscam e recrutam com agilidade um time de meta-humanos, mas mesmo com a formação da liga de heróis sem precedentes - Batman, Mulher-Maraviha, Aquaman (Jason Momoa), Cyborg (Ray Fisher) e Flash (Ezra Miller) -, poderá ser tarde demais para salvar o planeta de um catastrófico ataque.</p>
+<p class="sinopse">Treinada desde cedo para ser uma guerreira imbatível, Diana Prince (Gal Gadot) nunca saiu da paradisíaca ilha em que é reconhecida como princesa das Amazonas. Quando o piloto Steve Trevor (Chris Pine) se acidenta e cai numa praia do local, ela descobre que uma guerra sem precedentes está se espalhando pelo mundo e decide deixar seu lar certa de que pode parar o conflito. Lutando para acabar com todas as lutas, Diana percebe o alcance de seus poderes e sua verdadeira missão na Terra.</p>
 <p class="titulo2" id="trailer"> Trailer</p>
-<iframe src="https://www.youtube.com/embed/H0Z7ewOXCKw" class="video"></iframe>
+<iframe src="https://www.youtube.com/embed/bldAkEUANWA" class="video"></iframe>
 
 <?php
 }	
 ?>
 <div class="comentar" id="comentar">
 	<h3 id="perfil" style="margin-left:  26vw"><?php if($c == false){ echo "Digite aqui seu comentário"; } else { echo "!Só é permitido um comentário do usuário por filme!";} ?></h3>
-		<form method="POST" action="jl.php" style="margin-left:  26vw" style="visibility: <?php if($c == true){ echo "hidden"; } ?>">
+		<form method="POST" action="mm.php" style="margin-left:  26vw" style="visibility: <?php if($c == true){ echo "hidden"; } ?>">
 			Nota: <input type="radio" name="number" value="1" checked> 1
   			<input type="radio" name="number" value="2"> 2
   			<input type="radio" name="number" value="3">3
@@ -175,7 +170,7 @@ else{
 </footer>
 <section>
 	<?php
-	$select = mysqli_query($conexao,'SELECT c.idFilme, c.idUsuario, c.coment,c.stars, u.nome FROM comentar c JOIN usuario u ON c.idUsuario = u.id WHERE c.idFilme =1');
+	$select = mysqli_query($conexao,'SELECT c.idFilme, c.idUsuario, c.coment,c.stars, u.nome FROM comentar c JOIN usuario u ON c.idUsuario = u.id WHERE c.idFilme =10');
 	while($linha = mysqli_fetch_array($select)){
 		$star = $linha['stars'];
 		$comentario = $linha['coment'];

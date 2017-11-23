@@ -1,0 +1,30 @@
+.comentar{
+	border-color: white;
+	border-style: solid;
+	border-top-width: 3px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+
+	margin-top: 100px;
+	padding-bottom: 10px;
+}
+.usus{
+	right: 320px;
+}
+.pk{
+	padding-top: 0px;
+	width: 1003px;
+	margin: 4px auto;
+	background-color: #bf0000;
+	color: black;
+}
+.pk h3{
+	margin: 0;
+}
+.pk p{
+	margin: 0;
+}
+.usu_img{
+	height: 30px;
+	width: 30px;
+}
